@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/HomePage";
+import Home from "./pages/frontpages/HomePage";
 import MainLayout from "./layouts/MainLayout";
-import DetailPage from "./pages/DetailPage";
-import CheckoutPage from "./pages/CheckoutPage";
-import CartPage from "./pages/CartPage";
+import DetailPage from "./pages/frontpages/DetailPage";
+import CheckoutPage from "./pages/frontpages/CheckoutPage";
+import CartPage from "./pages/frontpages/CartPage";
 
 function App() {
   return (

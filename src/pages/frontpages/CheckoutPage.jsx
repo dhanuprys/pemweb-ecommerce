@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
-import SafeWidth from "../components/SafeWidth";
-import CheckoutForm from "../components/CheckoutForm";
-import OrderSummary from "../components/OrderSummary";
+import SafeWidth from "../../components/SafeWidth";
+import CheckoutForm from "../../components/CheckoutForm";
+import OrderSummary from "../../components/OrderSummary";
 
 export default function CheckoutPage() {
     const location = useLocation();

@@ -1,8 +1,8 @@
 import { useLocation } from "react-router-dom";
-import SafeWidth from "../components/SafeWidth";
-import ProductDetail from "../components/ProductDetail";
-import CheckoutCard from "../components/CheckoutCard";
-import ProductReview from "../components/ProductReview";
+import SafeWidth from "../../components/SafeWidth";
+import ProductDetail from "../../components/ProductDetail";
+import CheckoutCard from "../../components/CheckoutCard";
+import ProductReview from "../../components/ProductReview";
 
 export default function DetailPage() {
     const product = useLocation().state.product;

@@ -1,6 +1,6 @@
-import ProductCard from "../components/ProductCard";
-import products from "../data/products";
-import SafeWidth from "../components/SafeWidth";
+import ProductCard from "../../components/ProductCard";
+import products from "../../data/products";
+import SafeWidth from "../../components/SafeWidth";
 
 export default function Home() {
     return (

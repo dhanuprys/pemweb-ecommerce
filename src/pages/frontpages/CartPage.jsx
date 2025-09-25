@@ -1,7 +1,7 @@
-import SafeWidth from "../components/SafeWidth";
-import CartItem from "../components/CartItem";
-import CartSummary from "../components/CartSummary";
-import cartData from "../data/cart";
+import SafeWidth from "../../components/SafeWidth";
+import CartItem from "../../components/CartItem";
+import CartSummary from "../../components/CartSummary";
+import cartData from "../../data/cart";
 import { IoCartOutline } from "react-icons/io5";
 
 export default function CartPage() {

@@ -3,10 +3,9 @@ import formatPrice from "../utils/formatPrice";
 import { IoClipboardOutline, IoTicketOutline } from "react-icons/io5";
 
 export default function CartSummary({ items }) {
-    // Calculate totals
     const subtotal = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const shippingCost = subtotal > 500000 ? 0 : 15000; // Free shipping above 500k
-    const total = subtotal + shippingCost;
+    const totalPrice = subtotal + shippingCost;
     const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
 
     return (
@@ -42,7 +41,7 @@ export default function CartSummary({ items }) {
                     <div className="border-t border-gray-200 pt-2 sm:pt-3">
                         <div className="flex justify-between font-semibold text-base sm:text-lg">
                             <span>Total</span>
-                            <span className="text-green-600">{formatPrice(total)}</span>
+                            <span className="text-green-600">{formatPrice(totalPrice)}</span>
                         </div>
                     </div>
                 </div>

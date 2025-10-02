@@ -2,10 +2,12 @@ import { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 import formatPrice from "../utils/formatPrice";
 import { IoChatboxEllipsesOutline, IoHeartOutline, IoShareOutline } from "react-icons/io5";
+import useCart from "../stores/use-cart";
+import { toast } from "sonner";
 
 export default function CheckoutCard({ product }) {
     const [quantity, setQuantity] = useState(1);
-
+    const addProduct = useCart(state => state.addProduct);
     const addQuantity = useCallback(() => {
         setQuantity(prev => prev + 1);
     }, []);
@@ -18,6 +20,14 @@ export default function CheckoutCard({ product }) {
             return prev - 1;
         });
     }, []);
+
+    const addProductToCart = useCallback(() => {
+        addProduct(product, quantity);
+        setQuantity(1);
+        toast.success(`${product.title} berhasil ditambahkan ke keranjang`, {
+            richColors: true,
+        });
+    }, [product, addProduct, quantity]);
 
     return (
         <div>
@@ -54,11 +64,9 @@ export default function CheckoutCard({ product }) {
                     </strong>
                 </div>
                 <nav className="mt-4">
-                    <Link to="/cart">
-                        <button className="bg-green-600 rounded-xl w-full text-white px-4 py-2">
-                            + Keranjang
-                        </button>
-                    </Link>
+                    <button onClick={addProductToCart} className="bg-green-600 rounded-xl w-full text-white px-4 py-2">
+                        + Keranjang
+                    </button>
                     <Link to="/checkout" state={{ product, quantity }}>
                         <button className="border border-green-600 rounded-xl mt-2 w-full text-green-600 px-4 py-2">
                             Beli Sekarang

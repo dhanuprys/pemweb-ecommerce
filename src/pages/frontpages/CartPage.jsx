@@ -1,10 +1,11 @@
 import SafeWidth from "../../components/SafeWidth";
 import CartItem from "../../components/CartItem";
 import CartSummary from "../../components/CartSummary";
-import cartData from "../../data/cart";
 import { IoCartOutline } from "react-icons/io5";
+import useCart from "../../stores/use-cart";
 
 export default function CartPage() {
+    const cartData = useCart(state => state.products);
     return (
         <div>
             <SafeWidth className="grid grid-cols-1 lg:grid-cols-6 gap-x-4 lg:gap-x-8">

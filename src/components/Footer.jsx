@@ -181,11 +181,11 @@ export default function Footer() {
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                             <div className="text-center md:text-left">
                                 <p className="text-sm text-gray-600">
-                                    © 2025 Hackstore. All rights reserved.
-                                </p>
+                            © 2025 Hackstore. All rights reserved.
+                        </p>
                                 <p className="text-xs mt-1 text-gray-500">
-                                    Built with React & Tailwind CSS
-                                </p>
+                            Built with React & Tailwind CSS
+                        </p>
                             </div>
                             
                             {/* Legal Links */}
